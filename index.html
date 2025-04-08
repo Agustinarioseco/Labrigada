@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Brigada</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Bodoni+Moda:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="menu-flotante">
+    <nav class="menu-contenedor">
+      <div class="logo">
+        <img src="./img/logo-menu.png" alt="La Brigada" />
+      </div>
+      
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="./pages/quienes-somos.html">¿QUIÉNES SOMOS?</a></li>
+        <li><a href="./pages/recetas.html">RECETAS</a></li>
+        <li><a href="./pages/puntos-de-venta.html">PUNTOS DE VENTA</a></li>
+        <li><a href="https://labrigadalaboratoriodesab.mitiendanube.com/password/" class="btn-tienda" class="text-btn-tienda">TIENDA DIGITAL</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="postada-visual">
+    <img src="./img/fondo.png" alt="Texto de postada" class="img-desktop" />
+    <img src="./img/fondo-celular.png" alt="Texto de postada" class="img-mobile" />
+  </section>
+<main>
+    <section class="bloque-nosotros">
+      <div class="marca-agua"></div>
+    
+      <div class="contenido-nosotros">
+        <div class="texto-nosotros">
+          <div class="frase-nosotros">
+            <p>
+              “Somos el <span class="italic">laboratorio gourmet</span><br>
+              que transforma lo cotidiano<br>
+              en <span class="italic">extraordinario</span>.”
+            </p>
+          </div>
+          <a href="#quienes-somos" class="btn-historia">Descubrí nuestra historia</a>
+        </div>
+    
+        <div class="imagen-nosotros">
+          <div>
+            <img src="./img/inicio-producto.png" alt="Producto La Brigada">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="carrusel-productos">
+      <h2 class="titulo-productos">Nuestros productos</h2>
+    
+      <div class="contenedor-carrusel">
+        <button class="btn-carrusel izq">&#10094;</button>
+    
+        <div class="track-productos">
+          <div class="card-producto">
+            <img src="./img/aceites.png" alt="Aceites" />
+            <p>Aceites</p>
+          </div>
+          <div class="card-producto">
+            <img src="./img/rub.png" alt="Línea Rub" />
+            <p>Línea Rub</p>
+          </div>
+          <div class="card-producto">
+            <img src="./img/mezcla-de-especias.png" alt="Mezcla de especias" />
+            <p>Mezcla de especias</p>
+          </div>
+          <div class="card-producto">
+            <img src="./img/IMG_2705.png" alt="Sales de autor" />
+            <p>Sales de autor</p>
+          </div>
+          <div class="card-producto">
+            <img src="./img/IMG_3227.png" alt="Sales minerales" />
+            <p>Sales minerales</p>
+          </div>
+        </div>
+    
+        <button class="btn-carrusel der">&#10095;</button>
+      </div>
+
+
+      <section class="seccion-comentarios">
+        <h2 class="titulo-comentarios">Lo que dicen sobre nosotros</h2>
+      
+        <div class="carrusel-comentarios" id="comentarios-guardados">
+          <!-- Comentarios de usuarios se agregan acá dinámicamente -->
+        </div>
+      
+        <div class="formulario-envio">
+          <h3>¿Probaste nuestros productos?</h3>
+          <form id="form-comentario">
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+            <textarea id="mensaje" placeholder="Escribí tu comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+</main>
+<footer class="footer">
+        <div class="footer-contenido">
+          <div class="footer-logo">
+            <img src="./img/logo-menu.png" alt="La Brigada" />
+          </div>
+          <div class="footer-links">
+            <a href="#">HOME</a>
+            <a href="#quienes-somos">¿QUIÉNES SOMOS?</a>
+            <a href="#">RECETAS</a>
+            <a href="#">PUNTOS DE VENTA</a>
+            <a href="#">TIENDA DIGITAL</a>
+          </div>
+          <p class="footer-copy">© 2025 La Brigada. Todos los derechos reservados.</p>
+        </div>
+</footer>   
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+      toggle.classList.toggle('abierto');
+    });
+</script>
+
+<script>
+  const track = document.querySelector('.track-productos');
+  const leftBtn = document.querySelector('.btn-carrusel.izq');
+  const rightBtn = document.querySelector('.btn-carrusel.der');
+
+  leftBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -200, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+</script>
+<script>
+  const form = document.getElementById('form-comentario');
+  const contenedor = document.getElementById('comentarios-guardados');
+
+  // Cargar desde localStorage al iniciar
+  window.addEventListener('load', () => {
+    const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentarios.forEach(({ nombre, mensaje }) => {
+      crearComentario(nombre, mensaje);
+    });
+  });
+
+  // Guardar nuevo comentario
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    if (nombre && mensaje) {
+      guardarComentario(nombre, mensaje);
+      crearComentario(nombre, mensaje);
+      form.reset();
+    }
+  });
+
+  function guardarComentario(nombre, mensaje) {
+    const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentarios.push({ nombre, mensaje });
+    localStorage.setItem('comentarios', JSON.stringify(comentarios));
+  }
+
+  function crearComentario(nombre, mensaje) {
+    const card = document.createElement('div');
+    card.className = 'comentario-card';
+    card.innerHTML = `“${mensaje}”<small>– ${nombre}</small>`;
+    contenedor.appendChild(card); // Se agrega al final del carrusel
+  }
+</script>
+</body>
+</html>
+

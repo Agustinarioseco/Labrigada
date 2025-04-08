@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Brigada</title>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Bodoni+Moda:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="menu-flotante">
+    <nav class="menu-contenedor">
+      <div class="logo">
+        <img src="../img/logo-menu.png" alt="La Brigada" />
+      </div>
+      
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="../pages/quienes-somos.html">¿QUIÉNES SOMOS?</a></li>
+        <li><a href="../pages/recetas.html">RECETAS</a></li>
+        <li><a href="../pages/puntos-de-venta.html">PUNTOS DE VENTA</a></li>
+        <li><a href="https://labrigadalaboratoriodesab.mitiendanube.com/password/" class="btn-tienda" class="text-btn-tienda">TIENDA DIGITAL</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="postada-visual">
+    <img src="../img/fondo.png" alt="Texto de postada" class="img-desktop" />
+    <img src="../img/fondo-celular.png" alt="Texto de postada" class="img-mobile" />
+  </section>
+    <main class="pagina-quienes-somos">
+
+      <!-- QUIÉNES SOMOS -->
+      <section class="bloque-intro">
+        <h1 class="titulo-principal">¿Quiénes somos?</h1>
+        <p class="texto-intro">
+          La Brigada es un laboratorio gourmet donde cada condimento, aceite o mezcla nace para transformar la cocina en un acto creativo y extraordinario.
+        </p>
+      </section>
+    
+      <!-- NUESTRA ESENCIA -->
+      <section class="bloque-esencia">
+        <div class="caja-esencia">
+          <h2>Nuestra esencia</h2>
+          <p>Somos creadores de sabores. Nos mueve la pasión por experimentar, mezclar, probar y sorprender. Cada producto está pensado como una herramienta para potenciar la creatividad de quienes cocinan.</p>
+        </div>
+      </section>
+    
+      <!-- NUESTROS PRODUCTOS -->
+      <section class="bloque-productos">
+        <div class="caja-productos">
+          <h2>Nuestros productos</h2>
+          <p>Desarrollamos <strong>sales de autor</strong>, <strong>sales minerales</strong>, <strong>mezclas de especias</strong>, <strong>rubs</strong> y <strong>aceites infusionados</strong>, todos con identidad propia, pensados para elevar cualquier plato, desde lo cotidiano hasta lo gourmet.</p>
+        </div>
+      </section>
+    
+      <!-- CATEGORÍA DE PRODUCTOS -->
+      <section class="seccion-categoria">
+        <h3 class="titulo-categoria">Sales de autor</h3>
+        <div class="grid-productos">
+          <div class="card-producto-simple">
+            <img src="./img/sal-di-mare.png" alt="Sal Di Mare" />
+            <h4>Sal Di Mare</h4>
+            <p>Sal marina en escamas. Toque rústico ideal para carnes.</p>
+          </div>
+          <div class="card-producto-simple">
+            <img src="./img/sal-napuche.png" alt="Sal Napuche" />
+            <h4>Sal Napuche</h4>
+            <p>Vibrante y perfumada. Inspirada en sabores del norte.</p>
+          </div>
+          <!-- + otros productos -->
+        </div>
+      </section>
+    
+      <!-- VALORES -->
+      <section class="valores-brigada">
+        <h2>Lo que nos define</h2>
+        <ul>
+          <li>Creatividad culinaria</li>
+          <li>Ingredientes de calidad</li>
+          <li>Inspiración para quienes cocinan</li>
+          <li>Amor por los detalles</li>
+        </ul>
+      </section>
+    </main>
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <img src="../img/logo-menu.png" alt="La Brigada" />
+      </div>
+      <div class="footer-links">
+        <a href="/index.html">HOME</a>
+        <a href="../pages/quienes-somos.html">¿QUIÉNES SOMOS?</a>
+        <a href="../pages/recetas.html">RECETAS</a>
+        <a href="../pages/puntos-de-venta.html">PUNTOS DE VENTA</a>
+        <a href="https://labrigadalaboratoriodesab.mitiendanube.com/password/">TIENDA DIGITAL</a>
+      </div>
+      <p class="footer-copy">© 2025 La Brigada. Todos los derechos reservados.</p>
+    </div>
+</footer>   
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('nav-links');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('activo');
+  toggle.classList.toggle('abierto');
+});
+</script>
+</body>
+</html>
