@@ -700,3 +700,40 @@ strong {
   font-size: 1rem;
   line-height: 1.8;
 }
+@media (max-width: 480px) {
+  .pagina-quienes {
+    background-color: #2d3b2e;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    margin-top: -20px;
+  z-index: 10;}
+
+  .titulo-principal {
+    font-family: 'Bodoni Moda', serif;
+    font-size:24px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  .parrafo-grande {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+  }
+
+  .parrafo-mediano {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.parrafo-final {
+  font-size:16px;
+  font-style: italic;
+  color: #e6dfbf;
+  margin-top: 25px;
+}
+}
