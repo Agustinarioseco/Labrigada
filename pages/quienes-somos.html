@@ -61,30 +61,107 @@
         <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Aceites Ahumados"></button>
         <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="1" aria-label="Aceites infusionados"></button>
         <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="2" aria-label="Sales de autor"></button>
+        <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="3" aria-label="Sales de autor 2"></button>
+        <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="4" aria-label="Sales de autor 3"></button>
+        <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="5" aria-label="Sales minerales"></button>
+        <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="6" aria-label="Mezcla de especias 1"></button>
+        <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="7" aria-label="Mezcla de especias 2"></button>
       </div>
     
       <div class="carousel-inner">
     
+        <!-- ACEITES AHUMADOS -->
         <div class="carousel-item active">
-          <img src="../img/aceites-ahumados.png" class="d-block w-100" alt="Aceites Ahumados">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/aceitte-ahumado-mobile.png">
+            <img src="../img/aceitte-ahumado.png" class="d-block mx-auto carousel-img" alt="Aceites Ahumados">
+          </picture>
           <div class="carousel-caption d-none d-md-block">
             <h5>Aceites Ahumados</h5>
             <p>Lavanda & Menta · Oliva · Merkén</p>
           </div>
         </div>
     
+        <!-- ACEITES INFUSIONADOS -->
         <div class="carousel-item">
-          <img src="../img/aceites-infusionados.jpg" class="d-block w-100" alt="Aceites infusionados">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/aceite-infusionado-mobile.png">
+            <img src="../img/aceite-infusionado.png" class="d-block mx-auto carousel-img" alt="Aceites infusionados">
+          </picture>
           <div class="carousel-caption d-none d-md-block">
             <h5>Aceites infusionados</h5>
             <p>Albahaca · Ají & Ajo</p>
           </div>
         </div>
     
+        <!-- SALES DE AUTOR 1 -->
         <div class="carousel-item">
-          <img src="../img/sales-de-autor.jpg" class="d-block w-100" alt="Sales de autor">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/sales-de-autor-mobile.png">
+            <img src="../img/sales-de-autor.png" class="d-block mx-auto carousel-img" alt="Sales de autor">
+          </picture>
           <div class="carousel-caption d-none d-md-block">
             <h5>Sales de autor</h5>
+            <p>Sal Di Mare · Sal Napuche</p>
+          </div>
+        </div>
+    
+        <!-- SALES DE AUTOR 2 -->
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/sales-de-autor2-mobile.png">
+            <img src="../img/sales-de-autor2.png" class="d-block mx-auto carousel-img" alt="Sales de autor">
+          </picture>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sales de autor</h5>
+            <p>Sal Di Mare · Sal Napuche</p>
+          </div>
+        </div>
+    
+        <!-- SALES DE AUTOR 3 -->
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/Sales-de-autor3-mobile.png">
+            <img src="../img/Sales-de-autor3.png" class="d-block mx-auto carousel-img" alt="Sales de autor">
+          </picture>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sales de autor</h5>
+            <p>Sal Di Mare · Sal Napuche</p>
+          </div>
+        </div>
+    
+        <!-- SALES MINERALES -->
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/sales-minerales-mobile.png">
+            <img src="../img/sales-minetales.png" class="d-block mx-auto carousel-img" alt="Sales minerales">
+          </picture>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sales Minerales</h5>
+            <p>Sal Di Mare · Sal Napuche</p>
+          </div>
+        </div>
+    
+        <!-- MEZCLA DE ESPECIAS 1 -->
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/mezcla-de-especias1-mobile.png">
+            <img src="../img/mezclla-de-especias.png" class="d-block mx-auto carousel-img" alt="Mezcla de Especias">
+          </picture>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mezcla de Especias</h5>
+            <p>Sal Di Mare · Sal Napuche</p>
+          </div>
+        </div>
+    
+        <!-- MEZCLA DE ESPECIAS 2 -->
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/mezcla-de-especias2-mobile.">
+            <img src="../img/mezcla-de-especias2.png" class="d-block mx-auto carousel-img" alt="Mezcla de Especias">
+          </picture>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mezcla de Especias</h5>
             <p>Sal Di Mare · Sal Napuche</p>
           </div>
         </div>
@@ -113,16 +190,6 @@
       </ul>
     </section>
   </main>
-
-  <script>
-    const track = document.querySelector('.track-categorias');
-    document.querySelector('.btn-categoria.izq').addEventListener('click', () => {
-      track.scrollBy({ left: -250, behavior: 'smooth' });
-    });
-    document.querySelector('.btn-categoria.der').addEventListener('click', () => {
-      track.scrollBy({ left: 250, behavior: 'smooth' });
-    });
-  </script>
 
   <footer class="footer">
     <div class="footer-contenido">

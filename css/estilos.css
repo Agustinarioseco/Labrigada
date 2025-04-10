@@ -736,4 +736,92 @@ strong {
   color: #e6dfbf;
   margin-top: 25px;
 }
+.img-carrusel {
+  height: 500px;
+  max-width: 700px;
+  width: 100%; /* Para que sea responsive */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px; /* Opcional: bordes redondeados si querés */
 }
+}
+@media (max-width: 768px) {
+  .carousel-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+}
+.menu-flotante ul {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.pagina-recetas {
+  background-color: #2d3b2e;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro-recetas {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-principal {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #e6dfbf;
+}
+
+.texto-intro {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.galeria-recetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card-receta {
+  background-color: #f5f5f5;
+  color: #2d3b2e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+
+.card-receta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-receta:hover {
+  transform: scale(1.02);
+}
+
+.contenido-receta {
+  padding: 20px;
+}
+
+.btn-receta {
+  display: inline-block;
+  margin-top: 15px;
+  color: #2d3b2e;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+
+
+
