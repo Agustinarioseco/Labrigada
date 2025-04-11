@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Brigada</title>
+  <title>Recetas | La Brigada</title>
   <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Bodoni+Moda:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/estilos.css" />
@@ -21,7 +21,6 @@
             <span></span>
             <span></span>
           </div>
-    
           <ul class="nav-links" id="nav-links">
             <li><a href="/index.html">HOME</a></li>
             <li><a href="../pages/quienes-somos.html">¿QUIÉNES SOMOS?</a></li>
@@ -31,37 +30,82 @@
           </ul>
         </nav>
       </header>
-<main>
-    <main class="pagina-recetas">
-        <section class="intro-recetas">
-          <h1 class="titulo-principal">Recetas con sabor a creación</h1>
-          <p class="texto-intro">Inspirate con combinaciones únicas creadas con nuestros condimentos.</p>
-        </section>
-      
-        <section class="galeria-recetas">
-          <article class="card-receta">
-            <img src="../img/receta1.jpg" alt="Nombre de la receta" />
-            <div class="contenido-receta">
-              <h2>Risotto de hongos</h2>
-              <p>Un clásico reinventado con nuestra sal de trufa y mezcla de hongos ahumados.</p>
-              <a href="#" class="btn-receta">Ver receta</a>
+      <section class="postada-visual">
+        <img src="../img/FONDO2.png" alt="Texto de postada" class="img-desktop" />
+        <img src="../img/FONDO2CELULAR.png" alt="Texto de postada" class="img-mobile" />
+      </section>
+<main class="pagina-recetas">
+    <section class="bloque-recetas">
+        <div class="grid-recetas">
+          <!-- Cada .item-receta va acá -->
+          <div class="item-receta">
+            <img src="../img/image(3).png" alt="Tarta rústica">
+            <div class="contenido">
+              <h3>Tarta rústica de verduras</h3>
+              <p>Con nuestra mezcla de hierbas y una base crocante artesanal.</p>
+              <button class="btn-ver-receta">Ver receta</button>
             </div>
-          </article>
-      
-          <article class="card-receta">
-            <img src="../img/receta2.jpg" alt="Nombre de la receta" />
-            <div class="contenido-receta">
-              <h2>Pollo especiado al horno</h2>
-              <p>Sabores intensos con mezcla estilo BBQ y toque de pimienta & jengibre.</p>
-              <a href="#" class="btn-receta">Ver receta</a>
+            <div class="receta-detalle">
+              <h4>Ingredientes:</h4>
+              <ul>
+                <li>2 zucchinis</li>
+                <li>1 cebolla morada</li>
+                <li>Masa quebrada</li>
+                <li>Mezcla de hierbas La Brigada</li>
+                <li>Queso rallado</li>
+              </ul>
+              <h4>Preparación:</h4>
+              <p>Saltear los vegetales con las hierbas hasta dorar. Disponer en la masa, agregar queso y hornear 25 min a 180°.</p>
             </div>
-          </article>
-      
-          <!-- + más recetas -->
-        </section>
-      </main>
-      
+          </div>
+      <!-- Receta 2 -->
+      <div class="item-receta">
+        <img src="../img/image(2).png" alt="Hamburguesa de lentejas">
+        <div class="contenido">
+          <h3>Hamburguesa de lentejas</h3>
+          <p>Textura perfecta, sabor intenso y especias La Brigada.</p>
+          <button class="btn-ver-receta">Ver receta</button>
+        </div>
+        <div class="receta-detalle">
+          <h4>Ingredientes:</h4>
+          <ul>
+            <li>1 taza de lentejas cocidas</li>
+            <li>1 huevo</li>
+            <li>Pan rallado</li>
+            <li>Mix de especias La Brigada</li>
+            <li>Sal y pimienta</li>
+          </ul>
+          <h4>Preparación:</h4>
+          <p>Procesar todos los ingredientes. Formar hamburguesas y cocinarlas en sartén con un poco de aceite hasta dorar.</p>
+        </div>
+      </div>
+    
+      <!-- Receta 3 -->
+      <div class="item-receta">
+        <img src="../img/image(1).png" alt="Papas rústicas">
+        <div class="contenido">
+          <h3>Papas rústicas al horno</h3>
+          <p>Crocantes por fuera, suaves por dentro y bien condimentadas.</p>
+          <button class="btn-ver-receta">Ver receta</button>
+        </div>
+        <div class="receta-detalle">
+          <h4>Ingredientes:</h4>
+          <ul>
+            <li>4 papas grandes</li>
+            <li>Aceite de oliva infusionado La Brigada</li>
+            <li>Sal Napuche</li>
+            <li>Pimentón ahumado</li>
+          </ul>
+          <h4>Preparación:</h4>
+          <p>Cortar las papas en gajos, condimentar, hornear 40 minutos a 200°C. Servir con salsa o solas.</p>
+        </div>
+      </div>
+    </section>
+          <!-- Podés duplicar este bloque para más recetas -->
+        </div>
+      </section>   
 </main>
+
   <footer class="footer">
     <div class="footer-contenido">
       <div class="footer-logo">
@@ -86,6 +130,27 @@ toggle.addEventListener('click', () => {
   toggle.classList.toggle('abierto');
 });
 </script>
+<script>
+    document.querySelectorAll('.btn-ver-receta').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.item-receta');
+        const isOpen = card.classList.contains('abierta');
+  
+        // Cerrar todas las demás
+        document.querySelectorAll('.item-receta').forEach(c => {
+          c.classList.remove('abierta');
+          c.querySelector('.btn-ver-receta').textContent = 'Ver receta';
+        });
+  
+        // Si no estaba abierta, abrirla
+        if (!isOpen) {
+          card.classList.add('abierta');
+          btn.textContent = 'Ocultar receta';
+        }
+      });
+    });
+  </script>
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
